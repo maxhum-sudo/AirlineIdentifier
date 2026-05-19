@@ -130,5 +130,6 @@ const curatedTailImagePlugin = () => ({
 });
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? '/AirlineIdentifier/' : '/',
   plugins: [react(), curatedTailImagePlugin()],
 });

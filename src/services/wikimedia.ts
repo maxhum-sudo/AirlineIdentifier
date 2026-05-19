@@ -27,6 +27,9 @@ const COMMONS_API_URL = 'https://commons.wikimedia.org/w/api.php';
 const cache = new Map<string, Promise<WikimediaImage>>();
 const htmlTagPattern = /<[^>]*>/g;
 
+const resolvePublicAssetUrl = (src: string) =>
+  `${import.meta.env.BASE_URL}${src.replace(/^\//, '')}`;
+
 const stripHtml = (value: string | undefined) => {
   if (!value) {
     return '';
@@ -193,7 +196,7 @@ export const fetchTailImageForAirline = (airline: Airline) => {
     return Promise.resolve({
       fileTitle: tailImage.selectedFileTitle || tailImage.id,
       title: tailImage.alt,
-      imageUrl: tailImage.src,
+      imageUrl: resolvePublicAssetUrl(tailImage.src),
       pageUrl: tailImage.citation.sourceCategoryUrl,
       author: 'See local license metadata',
       license: tailImage.licensePath || 'See local license metadata',
