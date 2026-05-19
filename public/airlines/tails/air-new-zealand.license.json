@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "air-new-zealand",
+    "name": "Air New Zealand",
+    "country": "New Zealand",
+    "iata": "NZ",
+    "icao": "ANZ"
+  },
+  "localImagePath": "/airlines/tails/air-new-zealand.jpg",
+  "selectedFileTitle": "File:AirNZ Koru.jpg",
+  "wikimediaTitle": "AirNZ Koru",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:AirNZ_Koru.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/AirNZ_Koru.jpg",
+  "author": "Andrew Sullivan Kabl00ey",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "credit": "Own work",
+  "attributionText": "AirNZ Koru by Andrew Sullivan Kabl00ey, CC BY-SA 3.0",
+  "savedAt": "2026-05-19T15:49:26.262Z"
+}

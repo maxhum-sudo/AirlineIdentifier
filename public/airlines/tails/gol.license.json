@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "gol",
+    "name": "GOL Linhas Aéreas",
+    "country": "Brazil",
+    "iata": "G3",
+    "icao": "GLO"
+  },
+  "localImagePath": "/airlines/tails/gol.jpg",
+  "selectedFileTitle": "File:GOL and Austral (5459152326) (2).jpg",
+  "wikimediaTitle": "GOL and Austral (5459152326) (2)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:GOL_and_Austral_(5459152326)_(2).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/GOL_and_Austral_%285459152326%29_%282%29.jpg/960px-GOL_and_Austral_%285459152326%29_%282%29.jpg",
+  "author": "Leandro Ciuffo from Rio de Janeiro, Brazil",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "credit": "GOL and Austral",
+  "attributionText": "GOL and Austral (5459152326) (2) by Leandro Ciuffo from Rio de Janeiro, Brazil, CC BY 2.0",
+  "savedAt": "2026-05-19T15:50:02.749Z"
+}

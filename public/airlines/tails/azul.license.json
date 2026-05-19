@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "azul",
+    "name": "Azul Brazilian Airlines",
+    "country": "Brazil",
+    "iata": "AD",
+    "icao": "AZU"
+  },
+  "localImagePath": "/airlines/tails/azul.jpg",
+  "selectedFileTitle": "File:PR-AIT A330 Azul tailfin LIS.jpg",
+  "wikimediaTitle": "PR-AIT A330 Azul tailfin LIS",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:PR-AIT_A330_Azul_tailfin_LIS.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/PR-AIT_A330_Azul_tailfin_LIS.jpg/960px-PR-AIT_A330_Azul_tailfin_LIS.jpg",
+  "author": "Bene Riobó",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "attributionText": "PR-AIT A330 Azul tailfin LIS by Bene Riobó, CC BY-SA 4.0",
+  "savedAt": "2026-05-19T15:49:54.668Z"
+}

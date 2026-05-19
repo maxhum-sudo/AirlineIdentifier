@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "air-canada",
+    "name": "Air Canada",
+    "country": "Canada",
+    "iata": "AC",
+    "icao": "ACA"
+  },
+  "localImagePath": "/airlines/tails/air-canada.jpg",
+  "selectedFileTitle": "File:Oratoire (3084043924).jpg",
+  "wikimediaTitle": "Oratoire (3084043924)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Oratoire_(3084043924).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Oratoire_%283084043924%29.jpg/960px-Oratoire_%283084043924%29.jpg",
+  "author": "abdallahh from Montréal, Canada",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "credit": "oratoire",
+  "attributionText": "Oratoire (3084043924) by abdallahh from Montréal, Canada, CC BY 2.0",
+  "savedAt": "2026-05-19T15:43:07.032Z"
+}

@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "singapore",
+    "name": "Singapore Airlines",
+    "country": "Singapore",
+    "iata": "SQ",
+    "icao": "SIA"
+  },
+  "localImagePath": "/airlines/tails/singapore.jpg",
+  "selectedFileTitle": "File:9V-SFF Singapore Airlines Cargo Boeing 747-400F 29july2013 pic1.JPG",
+  "wikimediaTitle": "9V-SFF Singapore Airlines Cargo Boeing 747-400F 29july2013 pic1",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:9V-SFF_Singapore_Airlines_Cargo_Boeing_747-400F_29july2013_pic1.JPG",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/9V-SFF_Singapore_Airlines_Cargo_Boeing_747-400F_29july2013_pic1.JPG/960px-9V-SFF_Singapore_Airlines_Cargo_Boeing_747-400F_29july2013_pic1.JPG",
+  "author": "Alf van Beem",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "credit": "Own work",
+  "attributionText": "9V-SFF Singapore Airlines Cargo Boeing 747-400F 29july2013 pic1 by Alf van Beem, CC0",
+  "savedAt": "2026-05-19T15:48:29.289Z"
+}

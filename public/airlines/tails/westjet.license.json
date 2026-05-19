@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "westjet",
+    "name": "WestJet",
+    "country": "Canada",
+    "iata": "WS",
+    "icao": "WJA"
+  },
+  "localImagePath": "/airlines/tails/westjet.jpg",
+  "selectedFileTitle": "File:The evening rush hour at YYC (4845428395).jpg",
+  "wikimediaTitle": "The evening rush hour at YYC (4845428395)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:The_evening_rush_hour_at_YYC_(4845428395).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_evening_rush_hour_at_YYC_%284845428395%29.jpg/960px-The_evening_rush_hour_at_YYC_%284845428395%29.jpg",
+  "author": "RAF-YYC from Calgary, Canada",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "The evening rush hour at YYC",
+  "attributionText": "The evening rush hour at YYC (4845428395) by RAF-YYC from Calgary, Canada, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:43:19.727Z"
+}

@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "turkish",
+    "name": "Turkish Airlines",
+    "country": "Turkey",
+    "iata": "TK",
+    "icao": "THY"
+  },
+  "localImagePath": "/airlines/tails/turkish.jpg",
+  "selectedFileTitle": "File:D-AVZC Airbus A321 Turkish Airlines Msn 5546 Tail (8634659114).jpg",
+  "wikimediaTitle": "D-AVZC Airbus A321 Turkish Airlines Msn 5546 Tail (8634659114)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:D-AVZC_Airbus_A321_Turkish_Airlines_Msn_5546_Tail_(8634659114).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/D-AVZC_Airbus_A321_Turkish_Airlines_Msn_5546_Tail_%288634659114%29.jpg/960px-D-AVZC_Airbus_A321_Turkish_Airlines_Msn_5546_Tail_%288634659114%29.jpg",
+  "author": "Aeroprints.com",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "credit": "Flickr",
+  "attributionText": "D-AVZC Airbus A321 Turkish Airlines Msn 5546 Tail (8634659114) by Aeroprints.com, CC BY-SA 3.0",
+  "savedAt": "2026-05-19T15:47:07.569Z"
+}

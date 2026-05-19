@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "norwegian",
+    "name": "Norwegian Air Shuttle",
+    "country": "Norway",
+    "iata": "DY",
+    "icao": "NOZ"
+  },
+  "localImagePath": "/airlines/tails/norwegian.jpg",
+  "selectedFileTitle": "File:Derivas de Norwegian en Arlanda.jpg",
+  "wikimediaTitle": "Derivas de Norwegian en Arlanda",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Derivas_de_Norwegian_en_Arlanda.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Derivas_de_Norwegian_en_Arlanda.jpg/960px-Derivas_de_Norwegian_en_Arlanda.jpg",
+  "author": "Bene Riobó",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "attributionText": "Derivas de Norwegian en Arlanda by Bene Riobó, CC BY-SA 4.0",
+  "savedAt": "2026-05-19T15:46:58.337Z"
+}

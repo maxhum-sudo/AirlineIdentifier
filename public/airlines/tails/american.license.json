@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "american",
+    "name": "American Airlines",
+    "country": "United States",
+    "iata": "AA",
+    "icao": "AAL"
+  },
+  "localImagePath": "/airlines/tails/american.jpg",
+  "selectedFileTitle": "File:2015-10-14 Heck des American Airlines Airbus A330 (freddy2001).jpg",
+  "wikimediaTitle": "2015-10-14 Heck des American Airlines Airbus A330 (freddy2001)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:2015-10-14_Heck_des_American_Airlines_Airbus_A330_(freddy2001).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2015-10-14_Heck_des_American_Airlines_Airbus_A330_%28freddy2001%29.jpg/960px-2015-10-14_Heck_des_American_Airlines_Airbus_A330_%28freddy2001%29.jpg",
+  "author": "Freddy2001",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "attributionText": "2015-10-14 Heck des American Airlines Airbus A330 (freddy2001) by Freddy2001, CC BY-SA 4.0",
+  "savedAt": "2026-05-19T15:40:35.618Z"
+}

@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "spirit",
+    "name": "Spirit Airlines",
+    "country": "United States",
+    "iata": "NK",
+    "icao": "NKS"
+  },
+  "localImagePath": "/airlines/tails/spirit.jpg",
+  "selectedFileTitle": "File:DSC 8247-F-WWDF - MSN 5861 (10515771896).jpg",
+  "wikimediaTitle": "DSC 8247-F-WWDF - MSN 5861 (10515771896)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:DSC_8247-F-WWDF_-_MSN_5861_(10515771896).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/DSC_8247-F-WWDF_-_MSN_5861_%2810515771896%29.jpg/960px-DSC_8247-F-WWDF_-_MSN_5861_%2810515771896%29.jpg",
+  "author": "Laurent ERRERA from L'Union, France",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "DSC_8247-F-WWDF - MSN 5861",
+  "attributionText": "DSC 8247-F-WWDF - MSN 5861 (10515771896) by Laurent ERRERA from L'Union, France, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:42:39.248Z"
+}

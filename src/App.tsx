@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { CuratorScreen } from './components/CuratorScreen';
 import { GameCard } from './components/GameCard';
 import { ResultScreen } from './components/ResultScreen';
 import { airlines } from './data/airlines';
@@ -8,6 +9,8 @@ import {
   buildShareUrl,
   createGameSession,
   finalizeSessionQuestions,
+  isValidShareCode,
+  normalizeShareCode,
   readShareCodeFromUrl,
 } from './game/session';
 import { fetchTailImageForAirline } from './services/wikimedia';
@@ -16,6 +19,8 @@ import type { Airline, GameSession, PlayerAnswer, PlayerResult, WikimediaImage }
 const BEST_SCORE_KEY = 'airline-guess-best-score';
 const RECENT_RESULTS_KEY = 'airline-guess-results';
 const FEEDBACK_DELAY_MS = 900;
+const MOSAIC_BATCH_SIZE = 5;
+const MOSAIC_BATCH_DELAY_MS = 180;
 
 type GamePhase = 'intro' | 'playing' | 'results';
 
@@ -35,8 +40,11 @@ const createSessionWithQuestions = (shareCode?: string) => {
   return finalizeSessionQuestions(session, questions);
 };
 
+const delay = (ms: number) => new Promise((resolve) => window.setTimeout(resolve, ms));
+
 export default function App() {
   const initialShareCode = useMemo(() => readShareCodeFromUrl(), []);
+  const isCuratorMode = useMemo(() => new URLSearchParams(window.location.search).get('curate') === '1', []);
   const [session, setSession] = useState<GameSession>(() =>
     createSessionWithQuestions(initialShareCode || undefined),
   );
@@ -50,9 +58,16 @@ export default function App() {
   const [imageErrorByAirlineId, setImageErrorByAirlineId] = useState<Record<string, string>>({});
   const [bestScore, setBestScore] = useState(getStoredBestScore);
   const [copied, setCopied] = useState(false);
+  const [challengeCodeInput, setChallengeCodeInput] = useState('');
+  const [isMultiplayerOpen, setIsMultiplayerOpen] = useState(Boolean(initialShareCode));
+  const [introImages, setIntroImages] = useState<WikimediaImage[]>([]);
+  const [challengeMessage, setChallengeMessage] = useState<string | null>(
+    initialShareCode ? `Connected to challenge ${initialShareCode}.` : null,
+  );
   const questionStartedAt = useRef(Date.now());
   const roundAdvancing = useRef(false);
   const timerArmedQuestionId = useRef<string | null>(null);
+  const hasStartedIntroMosaic = useRef(false);
 
   const airlinesById = useMemo(
     () => new Map<string, Airline>(airlines.map((airline) => [airline.id, airline])),
@@ -61,6 +76,13 @@ export default function App() {
   const questions = useMemo(
     () => buildQuestionSet(airlines, session.seed, session.roundCount),
     [session.roundCount, session.seed],
+  );
+  const roundAirlines = useMemo(
+    () =>
+      questions
+        .map((question) => airlinesById.get(question.airlineId))
+        .filter((airline): airline is Airline => Boolean(airline)),
+    [airlinesById, questions],
   );
   const currentQuestion = questions[currentRoundIndex];
   const currentAirline = currentQuestion ? airlinesById.get(currentQuestion.airlineId) : null;
@@ -149,20 +171,47 @@ export default function App() {
     setAnswers([]);
     setCurrentRoundIndex(0);
     setCopied(false);
+    setChallengeMessage(`Connected to challenge ${session.shareCode}.`);
     setPhase('playing');
     startRoundTimer();
-  }, [startRoundTimer]);
+  }, [session.shareCode, startRoundTimer]);
+
+  const resetGameStateForSession = useCallback(
+    (nextSession: GameSession, nextPhase: GamePhase) => {
+      window.history.replaceState(null, '', buildShareUrl(nextSession.shareCode));
+      setSession(nextSession);
+      setAnswers([]);
+      setCurrentRoundIndex(0);
+      setSelectedAirlineId(null);
+      setCorrectAirlineId(null);
+      setCopied(false);
+      setChallengeMessage(`Connected to challenge ${nextSession.shareCode}.`);
+      setPhase(nextPhase);
+      startRoundTimer();
+    },
+    [startRoundTimer],
+  );
 
   const createNewGame = useCallback(() => {
     const nextSession = createSessionWithQuestions();
-    window.history.replaceState(null, '', buildShareUrl(nextSession.shareCode));
-    setSession(nextSession);
-    setAnswers([]);
-    setCurrentRoundIndex(0);
-    setCopied(false);
-    setPhase('intro');
-    startRoundTimer();
-  }, [startRoundTimer]);
+    setChallengeCodeInput('');
+    setIsMultiplayerOpen(false);
+    resetGameStateForSession(nextSession, 'intro');
+  }, [resetGameStateForSession]);
+
+  const joinChallenge = useCallback(() => {
+    setIsMultiplayerOpen(true);
+
+    if (!isValidShareCode(challengeCodeInput)) {
+      setChallengeMessage('Enter a challenge code with at least 4 letters or numbers.');
+      return;
+    }
+
+    const normalizedCode = normalizeShareCode(challengeCodeInput);
+    const nextSession = createSessionWithQuestions(normalizedCode);
+    setChallengeCodeInput('');
+    resetGameStateForSession(nextSession, 'playing');
+  }, [challengeCodeInput, resetGameStateForSession]);
 
   const copyChallenge = useCallback(async () => {
     await navigator.clipboard.writeText(shareUrl);
@@ -200,21 +249,55 @@ export default function App() {
   }, [correctAirlineId, isPromptReady, phase, submitAnswer]);
 
   useEffect(() => {
-    if (!currentAirline || imageByAirlineId[currentAirline.id] || imageErrorByAirlineId[currentAirline.id]) {
+    roundAirlines.forEach((airline) => {
+      if (imageByAirlineId[airline.id] || imageErrorByAirlineId[airline.id]) {
+        return;
+      }
+
+      fetchTailImageForAirline(airline)
+        .then((image) => {
+          setImageByAirlineId((previous) => ({ ...previous, [airline.id]: image }));
+        })
+        .catch((error: unknown) => {
+          setImageErrorByAirlineId((previous) => ({
+            ...previous,
+            [airline.id]: error instanceof Error ? error.message : 'Image failed to load',
+          }));
+        });
+    });
+  }, [imageByAirlineId, imageErrorByAirlineId, roundAirlines]);
+
+  useEffect(() => {
+    if (phase !== 'intro' || hasStartedIntroMosaic.current) {
       return;
     }
 
-    fetchTailImageForAirline(currentAirline)
-      .then((image) => {
-        setImageByAirlineId((previous) => ({ ...previous, [currentAirline.id]: image }));
-      })
-      .catch((error: unknown) => {
-        setImageErrorByAirlineId((previous) => ({
-          ...previous,
-          [currentAirline.id]: error instanceof Error ? error.message : 'Image failed to load',
-        }));
-      });
-  }, [currentAirline, imageByAirlineId, imageErrorByAirlineId]);
+    hasStartedIntroMosaic.current = true;
+
+    const loadMosaic = async () => {
+      for (let index = 0; index < airlines.length; index += MOSAIC_BATCH_SIZE) {
+        const batch = airlines.slice(index, index + MOSAIC_BATCH_SIZE);
+
+        await Promise.allSettled(
+          batch.map((airline) =>
+            fetchTailImageForAirline(airline).then((image) => {
+              setIntroImages((previous) => {
+                if (previous.some((item) => item.pageUrl === image.pageUrl)) {
+                  return previous;
+                }
+
+                return [...previous, image].slice(0, airlines.length);
+              });
+            }),
+          ),
+        );
+
+        await delay(MOSAIC_BATCH_DELAY_MS);
+      }
+    };
+
+    void loadMosaic();
+  }, [phase]);
 
   const latestResult: PlayerResult = {
     sessionId: session.id,
@@ -223,8 +306,23 @@ export default function App() {
     completedAt: new Date().toISOString(),
   };
 
+  if (isCuratorMode) {
+    return (
+      <main className="app-shell curator-shell">
+        <div className="brand">
+          <span className="logo-mark">AG</span>
+          <div>
+            <p className="eyebrow">Airline Guess</p>
+            <strong>Tail Challenge</strong>
+          </div>
+        </div>
+        <CuratorScreen airlines={airlines} />
+      </main>
+    );
+  }
+
   return (
-    <main className="app-shell">
+    <main className={`app-shell ${phase === 'intro' ? 'intro-shell' : ''}`}>
       <div className="brand">
         <span className="logo-mark">AG</span>
         <div>
@@ -234,27 +332,78 @@ export default function App() {
       </div>
 
       {phase === 'intro' ? (
-        <section className="intro-card">
-          <p className="eyebrow">5 rounds · 4 choices · 10 seconds</p>
-          <h1>Can you identify the airline from the tail?</h1>
-          <p>
-            Every challenge uses Wikimedia Commons aircraft tailfin categories and keeps attribution
-            visible while you play. Share code <strong>{session.shareCode}</strong> gives everyone the
-            same five questions.
-          </p>
-          <div className="action-row">
-            <button onClick={beginGame} type="button">
-              Start game
-            </button>
-            <button className="secondary" onClick={createNewGame} type="button">
-              New challenge
+        <section className="intro-card intro-hero">
+          <div className="tail-mosaic" aria-hidden="true">
+            {introImages.map((image) => (
+              <img alt="" key={image.pageUrl} src={image.imageUrl} />
+            ))}
+          </div>
+          <div className="intro-overlay" />
+          <div className="intro-content">
+            <p className="eyebrow">Airline Guess</p>
+            <h1>Tail Challenge</h1>
+            <button className="start-button" onClick={beginGame} type="button">
+              Start
             </button>
           </div>
-          {initialShareCode ? <p className="notice">Loaded shared challenge {initialShareCode}.</p> : null}
+          <div className="multiplayer-dock">
+            {isMultiplayerOpen ? (
+              <form
+                className="challenge-form compact"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  joinChallenge();
+                }}
+              >
+                <label>
+                  Challenge code
+                  <input
+                    autoComplete="off"
+                    autoFocus
+                    inputMode="text"
+                    onChange={(event) => setChallengeCodeInput(event.target.value)}
+                    placeholder="TEST50"
+                    value={challengeCodeInput}
+                  />
+                </label>
+                <button type="submit">Play</button>
+              </form>
+            ) : (
+              <button
+                className="multiplayer-button"
+                onClick={() => setIsMultiplayerOpen(true)}
+                type="button"
+              >
+                Multiplayer
+              </button>
+            )}
+            {challengeMessage ? <p className="notice">{challengeMessage}</p> : null}
+          </div>
         </section>
       ) : null}
 
-      {phase === 'playing' && currentQuestion ? (
+      {phase === 'playing' && currentQuestion && !isPromptReady ? (
+        <section className="game-card loading-card" aria-live="polite">
+          <div className="game-status">
+            <span>
+              Round {currentRoundIndex + 1} of {questions.length}
+            </span>
+            <span>Score {totalScore}</span>
+          </div>
+          <div className="prompt-card">
+            <div className="image-placeholder">
+              <span className="loading-spinner" aria-hidden="true" />
+              Loading photo and choices...
+            </div>
+          </div>
+          <div className="loading-copy">
+            <p className="eyebrow">Preparing round</p>
+            <h1>The options will appear with the photo.</h1>
+          </div>
+        </section>
+      ) : null}
+
+      {phase === 'playing' && currentQuestion && isPromptReady ? (
         <GameCard
           airlinesById={airlinesById}
           correctAirlineId={correctAirlineId}
@@ -275,6 +424,9 @@ export default function App() {
         <>
           <ResultScreen
             bestScore={bestScore}
+            challengeCodeInput={challengeCodeInput}
+            onChallengeCodeChange={setChallengeCodeInput}
+            onJoinChallenge={joinChallenge}
             onCopyChallenge={copyChallenge}
             onNewGame={createNewGame}
             onReplay={beginGame}
@@ -282,6 +434,7 @@ export default function App() {
             shareUrl={shareUrl}
           />
           {copied ? <p className="notice">Challenge link copied.</p> : null}
+          {challengeMessage ? <p className="notice">{challengeMessage}</p> : null}
         </>
       ) : null}
     </main>

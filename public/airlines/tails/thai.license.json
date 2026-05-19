@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "thai",
+    "name": "Thai Airways",
+    "country": "Thailand",
+    "iata": "TG",
+    "icao": "THA"
+  },
+  "localImagePath": "/airlines/tails/thai.jpg",
+  "selectedFileTitle": "File:DSC 8304-HS-TXG (10518175956).jpg",
+  "wikimediaTitle": "DSC 8304-HS-TXG (10518175956)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:DSC_8304-HS-TXG_(10518175956).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/DSC_8304-HS-TXG_%2810518175956%29.jpg/960px-DSC_8304-HS-TXG_%2810518175956%29.jpg",
+  "author": "Laurent ERRERA from L'Union, France",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "DSC_8304-HS-TXG",
+  "attributionText": "DSC 8304-HS-TXG (10518175956) by Laurent ERRERA from L'Union, France, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:48:35.425Z"
+}

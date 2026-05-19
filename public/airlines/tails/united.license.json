@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "united",
+    "name": "United Airlines",
+    "country": "United States",
+    "iata": "UA",
+    "icao": "UAL"
+  },
+  "localImagePath": "/airlines/tails/united.jpg",
+  "selectedFileTitle": "File:United Airlines - Boeing 787-8 (14038782873).jpg",
+  "wikimediaTitle": "United Airlines - Boeing 787-8 (14038782873)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:United_Airlines_-_Boeing_787-8_(14038782873).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/United_Airlines_-_Boeing_787-8_%2814038782873%29.jpg/960px-United_Airlines_-_Boeing_787-8_%2814038782873%29.jpg",
+  "author": "Alan Wilson",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "United Airlines - Boeing 787-8",
+  "attributionText": "United Airlines - Boeing 787-8 (14038782873) by Alan Wilson, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:41:09.170Z"
+}

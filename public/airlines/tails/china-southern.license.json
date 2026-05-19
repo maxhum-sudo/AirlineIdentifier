@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "china-southern",
+    "name": "China Southern Airlines",
+    "country": "China",
+    "iata": "CZ",
+    "icao": "CSN"
+  },
+  "localImagePath": "/airlines/tails/china-southern.jpg",
+  "selectedFileTitle": "File:B-2071 China Southern Airlines Boeing 777-F1B - cn 37309, taxiing 22july2013 pic-010.JPG",
+  "wikimediaTitle": "B-2071 China Southern Airlines Boeing 777-F1B - cn 37309, taxiing 22july2013 pic-010",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:B-2071_China_Southern_Airlines_Boeing_777-F1B_-_cn_37309,_taxiing_22july2013_pic-010.JPG",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/B-2071_China_Southern_Airlines_Boeing_777-F1B_-_cn_37309%2C_taxiing_22july2013_pic-010.JPG/960px-B-2071_China_Southern_Airlines_Boeing_777-F1B_-_cn_37309%2C_taxiing_22july2013_pic-010.JPG",
+  "author": "Alf van Beem",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "credit": "Own work",
+  "attributionText": "B-2071 China Southern Airlines Boeing 777-F1B - cn 37309, taxiing 22july2013 pic-010 by Alf van Beem, CC0",
+  "savedAt": "2026-05-19T15:49:13.596Z"
+}

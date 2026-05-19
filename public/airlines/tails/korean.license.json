@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "korean",
+    "name": "Korean Air",
+    "country": "South Korea",
+    "iata": "KE",
+    "icao": "KAL"
+  },
+  "localImagePath": "/airlines/tails/korean.jpg",
+  "selectedFileTitle": "File:HL7434 Boeing 747F Korean Air Cargo Tail (7976412034).jpg",
+  "wikimediaTitle": "HL7434 Boeing 747F Korean Air Cargo Tail (7976412034)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:HL7434_Boeing_747F_Korean_Air_Cargo_Tail_(7976412034).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/HL7434_Boeing_747F_Korean_Air_Cargo_Tail_%287976412034%29.jpg/960px-HL7434_Boeing_747F_Korean_Air_Cargo_Tail_%287976412034%29.jpg",
+  "author": "Aeroprints.com",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "credit": "Flickr",
+  "attributionText": "HL7434 Boeing 747F Korean Air Cargo Tail (7976412034) by Aeroprints.com, CC BY-SA 3.0",
+  "savedAt": "2026-05-19T15:48:22.018Z"
+}

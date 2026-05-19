@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "aeroflot",
+    "name": "Aeroflot",
+    "country": "Russia",
+    "iata": "SU",
+    "icao": "AFL"
+  },
+  "localImagePath": "/airlines/tails/aeroflot.jpg",
+  "selectedFileTitle": "File:Aeroflot - Airbus A320 (14017478315).jpg",
+  "wikimediaTitle": "Aeroflot - Airbus A320 (14017478315)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Aeroflot_-_Airbus_A320_(14017478315).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Aeroflot_-_Airbus_A320_%2814017478315%29.jpg/960px-Aeroflot_-_Airbus_A320_%2814017478315%29.jpg",
+  "author": "Alan Wilson",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "Aeroflot - Airbus A320",
+  "attributionText": "Aeroflot - Airbus A320 (14017478315) by Alan Wilson, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:50:21.995Z"
+}

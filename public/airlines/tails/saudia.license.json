@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "saudia",
+    "name": "Saudia",
+    "country": "Saudi Arabia",
+    "iata": "SV",
+    "icao": "SVA"
+  },
+  "localImagePath": "/airlines/tails/saudia.jpg",
+  "selectedFileTitle": "File:Airbus A320-200 Saudi Arabian AL (SVA) F-WWIF - MSN 4122 - Will be HZ-AS15 (4219892212).jpg",
+  "wikimediaTitle": "Airbus A320-200 Saudi Arabian AL (SVA) F-WWIF - MSN 4122 - Will be HZ-AS15 (4219892212)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Airbus_A320-200_Saudi_Arabian_AL_(SVA)_F-WWIF_-_MSN_4122_-_Will_be_HZ-AS15_(4219892212).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Airbus_A320-200_Saudi_Arabian_AL_%28SVA%29_F-WWIF_-_MSN_4122_-_Will_be_HZ-AS15_%284219892212%29.jpg/960px-Airbus_A320-200_Saudi_Arabian_AL_%28SVA%29_F-WWIF_-_MSN_4122_-_Will_be_HZ-AS15_%284219892212%29.jpg",
+  "author": "Laurent ERRERA from L'Union, France",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "Airbus A320-200 Saudi Arabian AL (SVA) F-WWIF - MSN 4122 - Will be HZ-AS15",
+  "attributionText": "Airbus A320-200 Saudi Arabian AL (SVA) F-WWIF - MSN 4122 - Will be HZ-AS15 (4219892212) by Laurent ERRERA from L'Union, France, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:47:39.636Z"
+}

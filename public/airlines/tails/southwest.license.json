@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "southwest",
+    "name": "Southwest Airlines",
+    "country": "United States",
+    "iata": "WN",
+    "icao": "SWA"
+  },
+  "localImagePath": "/airlines/tails/southwest.jpg",
+  "selectedFileTitle": "File:Southwest Airlines aircraft at San Francisco International Airport 02.jpg",
+  "wikimediaTitle": "Southwest Airlines aircraft at San Francisco International Airport 02",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Southwest_Airlines_aircraft_at_San_Francisco_International_Airport_02.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Southwest_Airlines_aircraft_at_San_Francisco_International_Airport_02.jpg/960px-Southwest_Airlines_aircraft_at_San_Francisco_International_Airport_02.jpg",
+  "author": "Runner1928",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "attributionText": "Southwest Airlines aircraft at San Francisco International Airport 02 by Runner1928, CC BY-SA 4.0",
+  "savedAt": "2026-05-19T15:41:31.378Z"
+}

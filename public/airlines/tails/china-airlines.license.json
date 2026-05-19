@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "china-airlines",
+    "name": "China Airlines",
+    "country": "Taiwan",
+    "iata": "CI",
+    "icao": "CAL"
+  },
+  "localImagePath": "/airlines/tails/china-airlines.jpg",
+  "selectedFileTitle": "File:B-18215 (6932464121).jpg",
+  "wikimediaTitle": "B-18215 (6932464121)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:B-18215_(6932464121).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/B-18215_%286932464121%29.jpg/960px-B-18215_%286932464121%29.jpg",
+  "author": "redlegsfan21 from Vandalia, OH, United States",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "B-18215",
+  "attributionText": "B-18215 (6932464121) by redlegsfan21 from Vandalia, OH, United States, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:48:52.625Z"
+}

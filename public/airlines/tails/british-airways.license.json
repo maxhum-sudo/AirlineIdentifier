@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "british-airways",
+    "name": "British Airways",
+    "country": "United Kingdom",
+    "iata": "BA",
+    "icao": "BAW"
+  },
+  "localImagePath": "/airlines/tails/british-airways.jpg",
+  "selectedFileTitle": "File:116ad - British Airways Airbus A320-111, G-BUSC@ZRH,25.10.2000 - Flickr - Aero Icarus (cropped).jpg",
+  "wikimediaTitle": "116ad - British Airways Airbus A320-111, G-BUSC@ZRH,25.10.2000 - Flickr - Aero Icarus (cropped)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:116ad_-_British_Airways_Airbus_A320-111,_G-BUSC@ZRH,25.10.2000_-_Flickr_-_Aero_Icarus_(cropped).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/116ad_-_British_Airways_Airbus_A320-111%2C_G-BUSC%40ZRH%2C25.10.2000_-_Flickr_-_Aero_Icarus_%28cropped%29.jpg/960px-116ad_-_British_Airways_Airbus_A320-111%2C_G-BUSC%40ZRH%2C25.10.2000_-_Flickr_-_Aero_Icarus_%28cropped%29.jpg",
+  "author": "Aero Icarus from Zürich, Switzerland",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "116ad - British Airways Airbus A320-111; G-BUSC@ZRH;25.10.2000",
+  "attributionText": "116ad - British Airways Airbus A320-111, G-BUSC@ZRH,25.10.2000 - Flickr - Aero Icarus (cropped) by Aero Icarus from Zürich, Switzerland, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:44:57.098Z"
+}

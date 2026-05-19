@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "avianca",
+    "name": "Avianca",
+    "country": "Colombia",
+    "iata": "AV",
+    "icao": "AVA"
+  },
+  "localImagePath": "/airlines/tails/avianca.jpg",
+  "selectedFileTitle": "File:PR-AVU Airbus A320 Avianca Tail (8167195972).jpg",
+  "wikimediaTitle": "PR-AVU Airbus A320 Avianca Tail (8167195972)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:PR-AVU_Airbus_A320_Avianca_Tail_(8167195972).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/PR-AVU_Airbus_A320_Avianca_Tail_%288167195972%29.jpg/960px-PR-AVU_Airbus_A320_Avianca_Tail_%288167195972%29.jpg",
+  "author": "Aeroprints.com",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "credit": "Flickr",
+  "attributionText": "PR-AVU Airbus A320 Avianca Tail (8167195972) by Aeroprints.com, CC BY-SA 3.0",
+  "savedAt": "2026-05-19T15:49:48.201Z"
+}

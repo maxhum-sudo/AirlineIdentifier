@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "jal",
+    "name": "Japan Airlines",
+    "country": "Japan",
+    "iata": "JL",
+    "icao": "JAL"
+  },
+  "localImagePath": "/airlines/tails/jal.jpg",
+  "selectedFileTitle": "File:JAL Dreamliner tail (15062685180).jpg",
+  "wikimediaTitle": "JAL Dreamliner tail (15062685180)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:JAL_Dreamliner_tail_(15062685180).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/JAL_Dreamliner_tail_%2815062685180%29.jpg/960px-JAL_Dreamliner_tail_%2815062685180%29.jpg",
+  "author": "Valentin Hintikka from Finland",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "credit": "JAL Dreamliner tail",
+  "attributionText": "JAL Dreamliner tail (15062685180) by Valentin Hintikka from Finland, CC BY 2.0",
+  "savedAt": "2026-05-19T15:48:11.733Z"
+}

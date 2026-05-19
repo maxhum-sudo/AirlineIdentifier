@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "eva",
+    "name": "EVA Air",
+    "country": "Taiwan",
+    "iata": "BR",
+    "icao": "EVA"
+  },
+  "localImagePath": "/airlines/tails/eva.jpg",
+  "selectedFileTitle": "File:Evergreen (2298884067).jpg",
+  "wikimediaTitle": "Evergreen (2298884067)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Evergreen_(2298884067).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Evergreen_%282298884067%29.jpg/960px-Evergreen_%282298884067%29.jpg",
+  "author": "John Murphy",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "Evergreen",
+  "attributionText": "Evergreen (2298884067) by John Murphy, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:48:47.648Z"
+}

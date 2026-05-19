@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "xiamen",
+    "name": "XiamenAir",
+    "country": "China",
+    "iata": "MF",
+    "icao": "CXA"
+  },
+  "localImagePath": "/airlines/tails/xiamen.jpg",
+  "selectedFileTitle": "File:B-2848 Boeing 752 Xiamen Airlines Tail (11756978504).jpg",
+  "wikimediaTitle": "B-2848 Boeing 752 Xiamen Airlines Tail (11756978504)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:B-2848_Boeing_752_Xiamen_Airlines_Tail_(11756978504).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/B-2848_Boeing_752_Xiamen_Airlines_Tail_%2811756978504%29.jpg/960px-B-2848_Boeing_752_Xiamen_Airlines_Tail_%2811756978504%29.jpg",
+  "author": "Aeroprints.com",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "credit": "Flickr",
+  "attributionText": "B-2848 Boeing 752 Xiamen Airlines Tail (11756978504) by Aeroprints.com, CC BY-SA 3.0",
+  "savedAt": "2026-05-19T15:49:18.912Z"
+}

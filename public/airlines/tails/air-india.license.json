@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "air-india",
+    "name": "Air India",
+    "country": "India",
+    "iata": "AI",
+    "icao": "AIC"
+  },
+  "localImagePath": "/airlines/tails/air-india.jpg",
+  "selectedFileTitle": "File:Air India - Boeing 787-8 (14015591861).jpg",
+  "wikimediaTitle": "Air India - Boeing 787-8 (14015591861)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Air_India_-_Boeing_787-8_(14015591861).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Air_India_-_Boeing_787-8_%2814015591861%29.jpg/960px-Air_India_-_Boeing_787-8_%2814015591861%29.jpg",
+  "author": "Alan Wilson",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "Air India - Boeing 787-8",
+  "attributionText": "Air India - Boeing 787-8 (14015591861) by Alan Wilson, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:47:49.043Z"
+}

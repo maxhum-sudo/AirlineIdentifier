@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "finnair",
+    "name": "Finnair",
+    "country": "Finland",
+    "iata": "AY",
+    "icao": "FIN"
+  },
+  "localImagePath": "/airlines/tails/finnair.jpg",
+  "selectedFileTitle": "File:Airbus A340-313E, Finnair JP6511745.jpg",
+  "wikimediaTitle": "Airbus A340-313E, Finnair JP6511745",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Airbus_A340-313E,_Finnair_JP6511745.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Airbus_A340-313E%2C_Finnair_JP6511745.jpg/960px-Airbus_A340-313E%2C_Finnair_JP6511745.jpg",
+  "author": "Sean D Silva",
+  "license": "GFDL 1.2",
+  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+  "credit": "Gallery page https://www.jetphotos.com/photo/6511745\nPhoto https://cdn.jetphotos.com/full/2/36659_1237170122.jpg",
+  "attributionText": "Airbus A340-313E, Finnair JP6511745 by Sean D Silva, GFDL 1.2",
+  "savedAt": "2026-05-19T15:46:16.272Z"
+}

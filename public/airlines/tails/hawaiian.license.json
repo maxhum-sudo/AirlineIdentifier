@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "hawaiian",
+    "name": "Hawaiian Airlines",
+    "country": "United States",
+    "iata": "HA",
+    "icao": "HAL"
+  },
+  "localImagePath": "/airlines/tails/hawaiian.jpg",
+  "selectedFileTitle": "File:Hawaiian 767 tail (7733466490).jpg",
+  "wikimediaTitle": "Hawaiian 767 tail (7733466490)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Hawaiian_767_tail_(7733466490).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Hawaiian_767_tail_%287733466490%29.jpg/960px-Hawaiian_767_tail_%287733466490%29.jpg",
+  "author": "Simon_sees from Australia",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "credit": "Hawaiian 767 tail",
+  "attributionText": "Hawaiian 767 tail (7733466490) by Simon_sees from Australia, CC BY 2.0",
+  "savedAt": "2026-05-19T15:50:17.047Z"
+}

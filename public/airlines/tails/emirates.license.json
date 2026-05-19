@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "emirates",
+    "name": "Emirates",
+    "country": "United Arab Emirates",
+    "iata": "EK",
+    "icao": "UAE"
+  },
+  "localImagePath": "/airlines/tails/emirates.jpg",
+  "selectedFileTitle": "File:A6-EDI Emirates Airbus A380-861 - cn 028 at Schiphol (AMS - EHAM), The Netherlands, 16may2014, pic-011.JPG",
+  "wikimediaTitle": "A6-EDI Emirates Airbus A380-861 - cn 028 at Schiphol (AMS - EHAM), The Netherlands, 16may2014, pic-011",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:A6-EDI_Emirates_Airbus_A380-861_-_cn_028_at_Schiphol_(AMS_-_EHAM),_The_Netherlands,_16may2014,_pic-011.JPG",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/A6-EDI_Emirates_Airbus_A380-861_-_cn_028_at_Schiphol_%28AMS_-_EHAM%29%2C_The_Netherlands%2C_16may2014%2C_pic-011.JPG/960px-A6-EDI_Emirates_Airbus_A380-861_-_cn_028_at_Schiphol_%28AMS_-_EHAM%29%2C_The_Netherlands%2C_16may2014%2C_pic-011.JPG",
+  "author": "Alf van Beem",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "credit": "Own work",
+  "attributionText": "A6-EDI Emirates Airbus A380-861 - cn 028 at Schiphol (AMS - EHAM), The Netherlands, 16may2014, pic-011 by Alf van Beem, CC0",
+  "savedAt": "2026-05-19T15:47:18.021Z"
+}

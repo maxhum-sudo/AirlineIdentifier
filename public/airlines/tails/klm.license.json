@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "klm",
+    "name": "KLM",
+    "country": "Netherlands",
+    "iata": "KL",
+    "icao": "KLM"
+  },
+  "localImagePath": "/airlines/tails/klm.jpg",
+  "selectedFileTitle": "File:Boeing 737-700 PH-BGP of KLM Tail (12291134464).jpg",
+  "wikimediaTitle": "Boeing 737-700 PH-BGP of KLM Tail (12291134464)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Boeing_737-700_PH-BGP_of_KLM_Tail_(12291134464).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Boeing_737-700_PH-BGP_of_KLM_Tail_%2812291134464%29.jpg/960px-Boeing_737-700_PH-BGP_of_KLM_Tail_%2812291134464%29.jpg",
+  "author": "Aeroprints.com",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "credit": "Flickr",
+  "attributionText": "Boeing 737-700 PH-BGP of KLM Tail (12291134464) by Aeroprints.com, CC BY-SA 3.0",
+  "savedAt": "2026-05-19T15:45:41.375Z"
+}

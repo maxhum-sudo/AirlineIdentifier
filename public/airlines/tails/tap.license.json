@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "tap",
+    "name": "TAP Air Portugal",
+    "country": "Portugal",
+    "iata": "TP",
+    "icao": "TAP"
+  },
+  "localImagePath": "/airlines/tails/tap.jpg",
+  "selectedFileTitle": "File:CS-TOE Airbus A330 TAP Portugal Tail (8168960332).jpg",
+  "wikimediaTitle": "CS-TOE Airbus A330 TAP Portugal Tail (8168960332)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:CS-TOE_Airbus_A330_TAP_Portugal_Tail_(8168960332).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/CS-TOE_Airbus_A330_TAP_Portugal_Tail_%288168960332%29.jpg/960px-CS-TOE_Airbus_A330_TAP_Portugal_Tail_%288168960332%29.jpg",
+  "author": "Aeroprints.com",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "credit": "Flickr",
+  "attributionText": "CS-TOE Airbus A330 TAP Portugal Tail (8168960332) by Aeroprints.com, CC BY-SA 3.0",
+  "savedAt": "2026-05-19T15:46:26.093Z"
+}

@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "frontier",
+    "name": "Frontier Airlines",
+    "country": "United States",
+    "iata": "F9",
+    "icao": "FFT"
+  },
+  "localImagePath": "/airlines/tails/frontier.jpg",
+  "selectedFileTitle": "File:Airbus A319-111, Frontier Airlines AN1395282.jpg",
+  "wikimediaTitle": "Airbus A319-111, Frontier Airlines AN1395282",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Airbus_A319-111,_Frontier_Airlines_AN1395282.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Airbus_A319-111%2C_Frontier_Airlines_AN1395282.jpg/960px-Airbus_A319-111%2C_Frontier_Airlines_AN1395282.jpg",
+  "author": "Konstantin Von Wedelstaedt",
+  "license": "GFDL 1.2",
+  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+  "credit": "Gallery page http://www.airliners.net/photo/Frontier-Airlines/Airbus-A319-111/1395282/L\nPhoto http://cdn-www.airliners.net/aviation-photos/photos/2/8/2/1395282.jpg",
+  "attributionText": "Airbus A319-111, Frontier Airlines AN1395282 by Konstantin Von Wedelstaedt, GFDL 1.2",
+  "savedAt": "2026-05-19T15:42:56.862Z"
+}

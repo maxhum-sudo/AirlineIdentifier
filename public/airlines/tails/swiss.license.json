@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "swiss",
+    "name": "Swiss International Air Lines",
+    "country": "Switzerland",
+    "iata": "LX",
+    "icao": "SWR"
+  },
+  "localImagePath": "/airlines/tails/swiss.jpg",
+  "selectedFileTitle": "File:HB-IJH tail (4181732955).jpg",
+  "wikimediaTitle": "HB-IJH tail (4181732955)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:HB-IJH_tail_(4181732955).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/HB-IJH_tail_%284181732955%29.jpg",
+  "author": "Maarten Visser from Capelle aan den IJssel, Nederland",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "HB-IJH tail",
+  "attributionText": "HB-IJH tail (4181732955) by Maarten Visser from Capelle aan den IJssel, Nederland, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:46:07.078Z"
+}

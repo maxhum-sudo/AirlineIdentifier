@@ -36,6 +36,14 @@ const stripHtml = (value: string | undefined) => {
   return (documentValue.body.textContent || value.replace(htmlTagPattern, '')).trim();
 };
 
+const preloadImage = (url: string) =>
+  new Promise<void>((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve();
+    image.onerror = () => reject(new Error(`Image failed to load: ${url}`));
+    image.src = url;
+  });
+
 const requestCommons = async <T>(params: Record<string, string>) => {
   const url = new URL(COMMONS_API_URL);
   url.searchParams.set('origin', '*');
@@ -50,25 +58,51 @@ const requestCommons = async <T>(params: Record<string, string>) => {
   return (await response.json()) as T;
 };
 
-const fetchFirstFileTitle = async (categoryTitle: string) => {
+const isImageFileTitle = (title: string) => /\.(jpe?g|png|webp|gif)$/i.test(title);
+
+const fetchFileTitlesFromCategory = async (categoryTitle: string, limit = 12) => {
   const data = await requestCommons<CategoryMembersResponse>({
     action: 'query',
     format: 'json',
     list: 'categorymembers',
     cmtitle: categoryTitle,
     cmtype: 'file',
-    cmlimit: '12',
+    cmlimit: String(limit),
   });
 
-  const file = data.query?.categorymembers?.find((member) =>
-    /\.(jpe?g|png|webp|gif)$/i.test(member.title),
-  );
+  return data.query?.categorymembers?.map((member) => member.title).filter(isImageFileTitle) || [];
+};
 
-  if (!file) {
-    throw new Error(`No Wikimedia image found for ${categoryTitle}`);
+const fetchFirstSubcategoryTitle = async (categoryTitle: string) => {
+  const data = await requestCommons<CategoryMembersResponse>({
+    action: 'query',
+    format: 'json',
+    list: 'categorymembers',
+    cmtitle: categoryTitle,
+    cmtype: 'subcat',
+    cmlimit: '5',
+  });
+
+  return data.query?.categorymembers?.[0]?.title;
+};
+
+const fetchFirstFileTitle = async (categoryTitle: string) => {
+  const [directFileTitle] = await fetchFileTitlesFromCategory(categoryTitle);
+
+  if (directFileTitle) {
+    return directFileTitle;
   }
 
-  return file.title;
+  const subcategoryTitle = await fetchFirstSubcategoryTitle(categoryTitle);
+  const [subcategoryFileTitle] = subcategoryTitle
+    ? await fetchFileTitlesFromCategory(subcategoryTitle)
+    : [];
+
+  if (subcategoryFileTitle) {
+    return subcategoryFileTitle;
+  }
+
+  throw new Error(`No Wikimedia image found for ${categoryTitle}`);
 };
 
 const fetchImageInfo = async (fileTitle: string) => {
@@ -96,7 +130,8 @@ const fetchImageInfo = async (fileTitle: string) => {
   const title = stripHtml(metadata.ObjectName?.value) || page.title;
   const pageUrl = imageInfo.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(page.title)}`;
 
-  return {
+  const wikimediaImage = {
+    fileTitle,
     title,
     imageUrl: imageInfo.thumburl || imageInfo.url || '',
     pageUrl,
@@ -106,6 +141,45 @@ const fetchImageInfo = async (fileTitle: string) => {
     credit,
     attributionText: `${title} by ${author}, ${license}`,
   } satisfies WikimediaImage;
+
+  await preloadImage(wikimediaImage.imageUrl);
+  return wikimediaImage;
+};
+
+export const fetchWikimediaImageByFileTitle = (fileTitle: string) => {
+  const cached = cache.get(fileTitle);
+
+  if (cached) {
+    return cached;
+  }
+
+  const imagePromise = fetchImageInfo(fileTitle);
+  cache.set(fileTitle, imagePromise);
+  return imagePromise;
+};
+
+export const fetchTailImageCandidatesForAirline = async (airline: Airline, limit = 12) => {
+  const tailImage = airline.images.find((image) => image.category === 'tail');
+
+  if (!tailImage) {
+    throw new Error(`No tail image source configured for ${airline.name}`);
+  }
+
+  const categoryTitle = tailImage.citation.sourceCategoryTitle;
+  const directFileTitles = await fetchFileTitlesFromCategory(categoryTitle, limit);
+  const subcategoryTitle = await fetchFirstSubcategoryTitle(categoryTitle);
+  const subcategoryFileTitles = subcategoryTitle
+    ? await fetchFileTitlesFromCategory(subcategoryTitle, limit)
+    : [];
+  const fileTitles = Array.from(new Set([...directFileTitles, ...subcategoryFileTitles])).slice(
+    0,
+    limit,
+  );
+  const candidateResults = await Promise.allSettled(fileTitles.map(fetchWikimediaImageByFileTitle));
+
+  return candidateResults
+    .filter((result): result is PromiseFulfilledResult<WikimediaImage> => result.status === 'fulfilled')
+    .map((result) => result.value);
 };
 
 export const fetchTailImageForAirline = (airline: Airline) => {
@@ -115,14 +189,28 @@ export const fetchTailImageForAirline = (airline: Airline) => {
     return Promise.reject(new Error(`No tail image source configured for ${airline.name}`));
   }
 
-  const cacheKey = tailImage.citation.sourceCategoryTitle;
+  if (tailImage.src) {
+    return Promise.resolve({
+      fileTitle: tailImage.selectedFileTitle || tailImage.id,
+      title: tailImage.alt,
+      imageUrl: tailImage.src,
+      pageUrl: tailImage.citation.sourceCategoryUrl,
+      author: 'See local license metadata',
+      license: tailImage.licensePath || 'See local license metadata',
+      attributionText: tailImage.alt,
+    } satisfies WikimediaImage);
+  }
+
+  const cacheKey = tailImage.selectedFileTitle || tailImage.citation.sourceCategoryTitle;
   const cached = cache.get(cacheKey);
 
   if (cached) {
     return cached;
   }
 
-  const imagePromise = fetchFirstFileTitle(cacheKey).then(fetchImageInfo);
+  const imagePromise = tailImage.selectedFileTitle
+    ? fetchImageInfo(tailImage.selectedFileTitle)
+    : fetchFirstFileTitle(cacheKey).then(fetchImageInfo);
   cache.set(cacheKey, imagePromise);
   return imagePromise;
 };

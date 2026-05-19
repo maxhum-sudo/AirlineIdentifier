@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "air-china",
+    "name": "Air China",
+    "country": "China",
+    "iata": "CA",
+    "icao": "CCA"
+  },
+  "localImagePath": "/airlines/tails/air-china.jpg",
+  "selectedFileTitle": "File:B-2456 Boeing B747-4J6(BCF) Air China Cargo,CN 24346, taxiing 21July2013 pic-011.JPG",
+  "wikimediaTitle": "B-2456 Boeing B747-4J6(BCF) Air China Cargo,CN 24346, taxiing 21July2013 pic-011",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:B-2456_Boeing_B747-4J6(BCF)_Air_China_Cargo,CN_24346,_taxiing_21July2013_pic-011.JPG",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/B-2456_Boeing_B747-4J6%28BCF%29_Air_China_Cargo%2CCN_24346%2C_taxiing_21July2013_pic-011.JPG/960px-B-2456_Boeing_B747-4J6%28BCF%29_Air_China_Cargo%2CCN_24346%2C_taxiing_21July2013_pic-011.JPG",
+  "author": "Alf van Beem",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "credit": "Own work",
+  "attributionText": "B-2456 Boeing B747-4J6(BCF) Air China Cargo,CN 24346, taxiing 21July2013 pic-011 by Alf van Beem, CC0",
+  "savedAt": "2026-05-19T15:49:01.274Z"
+}

@@ -2,8 +2,10 @@ import type { GameSession, Question } from '../types';
 
 const SHARE_CODE_PATTERN = /^[A-Z0-9-]{4,32}$/;
 
-const normalizeShareCode = (shareCode: string) =>
+export const normalizeShareCode = (shareCode: string) =>
   shareCode.trim().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
+
+export const isValidShareCode = (shareCode: string) => SHARE_CODE_PATTERN.test(normalizeShareCode(shareCode));
 
 const createRandomShareCode = () => {
   const value = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(36);

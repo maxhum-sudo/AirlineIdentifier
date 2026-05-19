@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "ana",
+    "name": "All Nippon Airways",
+    "country": "Japan",
+    "iata": "NH",
+    "icao": "ANA"
+  },
+  "localImagePath": "/airlines/tails/ana.jpg",
+  "selectedFileTitle": "File:2018-05-16 tail of JA802A (aircraft).jpg",
+  "wikimediaTitle": "2018-05-16 tail of JA802A (aircraft)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:2018-05-16_tail_of_JA802A_(aircraft).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/2018-05-16_tail_of_JA802A_%28aircraft%29.jpg/960px-2018-05-16_tail_of_JA802A_%28aircraft%29.jpg",
+  "author": "宇",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "https://www.flickr.com/photos/pcchou/41494156434/",
+  "attributionText": "2018-05-16 tail of JA802A (aircraft) by 宇, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:48:03.707Z"
+}

@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "iberia",
+    "name": "Iberia",
+    "country": "Spain",
+    "iata": "IB",
+    "icao": "IBE"
+  },
+  "localImagePath": "/airlines/tails/iberia.jpg",
+  "selectedFileTitle": "File:Airbus A319 et A320 Iberia Alignés - Aéroport de Madrid-Barajas.jpg",
+  "wikimediaTitle": "Airbus A319 et A320 Iberia Alignés - Aéroport de Madrid-Barajas",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Airbus_A319_et_A320_Iberia_Align%C3%A9s_-_A%C3%A9roport_de_Madrid-Barajas.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Airbus_A319_et_A320_Iberia_Align%C3%A9s_-_A%C3%A9roport_de_Madrid-Barajas.jpg/960px-Airbus_A319_et_A320_Iberia_Align%C3%A9s_-_A%C3%A9roport_de_Madrid-Barajas.jpg",
+  "author": "Louis",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "Flickr: Airbus A319 et A320 Iberia Alignés - Aéroport de Madrid-Barajas",
+  "attributionText": "Airbus A319 et A320 Iberia Alignés - Aéroport de Madrid-Barajas by Louis, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:45:48.611Z"
+}

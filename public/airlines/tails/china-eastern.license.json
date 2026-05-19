@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "china-eastern",
+    "name": "China Eastern Airlines",
+    "country": "China",
+    "iata": "MU",
+    "icao": "CES"
+  },
+  "localImagePath": "/airlines/tails/china-eastern.jpg",
+  "selectedFileTitle": "File:Airbus A330-243, China Eastern Airlines JP6982024.jpg",
+  "wikimediaTitle": "Airbus A330-243, China Eastern Airlines JP6982024",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Airbus_A330-243,_China_Eastern_Airlines_JP6982024.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Airbus_A330-243%2C_China_Eastern_Airlines_JP6982024.jpg/960px-Airbus_A330-243%2C_China_Eastern_Airlines_JP6982024.jpg",
+  "author": "shimin",
+  "license": "GFDL 1.2",
+  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+  "credit": "Gallery page https://www.jetphotos.com/photo/6982024\nPhoto https://cdn.jetphotos.com/full/1/89381_1289312291.jpg",
+  "attributionText": "Airbus A330-243, China Eastern Airlines JP6982024 by shimin, GFDL 1.2",
+  "savedAt": "2026-05-19T15:49:07.013Z"
+}

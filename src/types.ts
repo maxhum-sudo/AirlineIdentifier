@@ -8,8 +8,11 @@ export type WikimediaCitation = {
 export type AirlineProductImage = {
   id: string;
   category: AirlineProductCategory;
+  src?: string;
   alt: string;
   citation: WikimediaCitation;
+  selectedFileTitle?: string;
+  licensePath?: string;
 };
 
 export type Airline = {
@@ -58,6 +61,7 @@ export type PlayerResult = {
 };
 
 export type WikimediaImage = {
+  fileTitle: string;
   title: string;
   imageUrl: string;
   pageUrl: string;

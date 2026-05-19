@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "easyjet",
+    "name": "easyJet",
+    "country": "United Kingdom",
+    "iata": "U2",
+    "icao": "EZY"
+  },
+  "localImagePath": "/airlines/tails/easyjet.jpg",
+  "selectedFileTitle": "File:-i---i- (32186390340).jpg",
+  "wikimediaTitle": "-i---i- (32186390340)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(32186390340).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/-i---i-_%2832186390340%29.jpg/960px--i---i-_%2832186390340%29.jpg",
+  "author": "Thomas Woodtli from Zürich, Switzerland",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "Flickr",
+  "attributionText": "-i---i- (32186390340) by Thomas Woodtli from Zürich, Switzerland, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:45:54.733Z"
+}

@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "qatar",
+    "name": "Qatar Airways",
+    "country": "Qatar",
+    "iata": "QR",
+    "icao": "QTR"
+  },
+  "localImagePath": "/airlines/tails/qatar.jpg",
+  "selectedFileTitle": "File:17-05-27-Flughafen Berlin TXL-a RR71146.jpg",
+  "wikimediaTitle": "17-05-27-Flughafen Berlin TXL-a RR71146",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:17-05-27-Flughafen_Berlin_TXL-a_RR71146.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/17-05-27-Flughafen_Berlin_TXL-a_RR71146.jpg/960px-17-05-27-Flughafen_Berlin_TXL-a_RR71146.jpg",
+  "author": "Ralf Roletschek",
+  "license": "GFDL 1.2",
+  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+  "credit": "Own work",
+  "attributionText": "17-05-27-Flughafen Berlin TXL-a RR71146 by Ralf Roletschek, GFDL 1.2",
+  "savedAt": "2026-05-19T15:47:33.087Z"
+}

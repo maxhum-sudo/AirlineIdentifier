@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "alaska",
+    "name": "Alaska Airlines",
+    "country": "United States",
+    "iata": "AS",
+    "icao": "ASA"
+  },
+  "localImagePath": "/airlines/tails/alaska.jpg",
+  "selectedFileTitle": "File:Alaska Airlines Boeing 737-890 N560AS (1).jpg",
+  "wikimediaTitle": "Alaska Airlines Boeing 737-890 N560AS (1)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:Alaska_Airlines_Boeing_737-890_N560AS_(1).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Alaska_Airlines_Boeing_737-890_N560AS_%281%29.jpg/960px-Alaska_Airlines_Boeing_737-890_N560AS_%281%29.jpg",
+  "author": "Cubbie_n_Vegas from Las Vegas, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "credit": "Alaska Airlines Boeing 737-890 N560AS",
+  "attributionText": "Alaska Airlines Boeing 737-890 N560AS (1) by Cubbie_n_Vegas from Las Vegas, USA, CC BY 2.0",
+  "savedAt": "2026-05-19T15:41:50.272Z"
+}

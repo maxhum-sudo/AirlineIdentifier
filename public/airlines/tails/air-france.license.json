@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "air-france",
+    "name": "Air France",
+    "country": "France",
+    "iata": "AF",
+    "icao": "AFR"
+  },
+  "localImagePath": "/airlines/tails/air-france.jpg",
+  "selectedFileTitle": "File:F-GSPE (6762174821).jpg",
+  "wikimediaTitle": "F-GSPE (6762174821)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:F-GSPE_(6762174821).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/F-GSPE_%286762174821%29.jpg/960px-F-GSPE_%286762174821%29.jpg",
+  "author": "redlegsfan21 from Vandalia, OH, United States",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "F-GSPE",
+  "attributionText": "F-GSPE (6762174821) by redlegsfan21 from Vandalia, OH, United States, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:45:18.203Z"
+}

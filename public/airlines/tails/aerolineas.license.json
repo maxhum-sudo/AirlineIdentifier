@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "aerolineas",
+    "name": "Aerolíneas Argentinas",
+    "country": "Argentina",
+    "iata": "AR",
+    "icao": "ARG"
+  },
+  "localImagePath": "/airlines/tails/aerolineas.jpg",
+  "selectedFileTitle": "File:LV-AXF B747-400 Argentina tail (4586363320) (2).jpg",
+  "wikimediaTitle": "LV-AXF B747-400 Argentina tail (4586363320) (2)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:LV-AXF_B747-400_Argentina_tail_(4586363320)_(2).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/LV-AXF_B747-400_Argentina_tail_%284586363320%29_%282%29.jpg/960px-LV-AXF_B747-400_Argentina_tail_%284586363320%29_%282%29.jpg",
+  "author": "Maarten Visser from Capelle aan den IJssel, Nederland",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "LV-AXF B747-400 Argentina tail",
+  "attributionText": "LV-AXF B747-400 Argentina tail (4586363320) (2) by Maarten Visser from Capelle aan den IJssel, Nederland, CC BY-SA 2.0",
+  "savedAt": "2026-05-19T15:50:10.332Z"
+}

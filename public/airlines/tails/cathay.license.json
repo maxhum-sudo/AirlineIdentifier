@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "cathay",
+    "name": "Cathay Pacific",
+    "country": "Hong Kong",
+    "iata": "CX",
+    "icao": "CPA"
+  },
+  "localImagePath": "/airlines/tails/cathay.jpg",
+  "selectedFileTitle": "File:B-HLI Airbus A330-342 Cathay Pacific 'HKSAR 10th Anniversary' (8751155465).jpg",
+  "wikimediaTitle": "B-HLI Airbus A330-342 Cathay Pacific 'HKSAR 10th Anniversary' (8751155465)",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:B-HLI_Airbus_A330-342_Cathay_Pacific_%27HKSAR_10th_Anniversary%27_(8751155465).jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/B-HLI_Airbus_A330-342_Cathay_Pacific_%27HKSAR_10th_Anniversary%27_%288751155465%29.jpg/960px-B-HLI_Airbus_A330-342_Cathay_Pacific_%27HKSAR_10th_Anniversary%27_%288751155465%29.jpg",
+  "author": "Robert Frola",
+  "license": "GFDL",
+  "licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
+  "credit": "https://www.flickr.com/photos/robertfrola/8751155465/",
+  "attributionText": "B-HLI Airbus A330-342 Cathay Pacific 'HKSAR 10th Anniversary' (8751155465) by Robert Frola, GFDL",
+  "savedAt": "2026-05-19T15:48:40.288Z"
+}

@@ -1,0 +1,20 @@
+{
+  "airline": {
+    "id": "ryanair",
+    "name": "Ryanair",
+    "country": "Ireland",
+    "iata": "FR",
+    "icao": "RYR"
+  },
+  "localImagePath": "/airlines/tails/ryanair.jpg",
+  "selectedFileTitle": "File:EI-DAK 737 Ryanair tailfin SCQ.jpg",
+  "wikimediaTitle": "EI-DAK 737 Ryanair tailfin SCQ",
+  "wikimediaPageUrl": "https://commons.wikimedia.org/wiki/File:EI-DAK_737_Ryanair_tailfin_SCQ.jpg",
+  "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/EI-DAK_737_Ryanair_tailfin_SCQ.jpg/960px-EI-DAK_737_Ryanair_tailfin_SCQ.jpg",
+  "author": "Bene Riobó",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "attributionText": "EI-DAK 737 Ryanair tailfin SCQ by Bene Riobó, CC BY-SA 4.0",
+  "savedAt": "2026-05-19T15:45:59.818Z"
+}
