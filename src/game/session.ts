@@ -1,25 +1,21 @@
-import type { GameSession, Question } from '../types';
+import type { GameMode, GameSession, Question } from '../types';
+import { isValidShareCode, normalizeShareCode } from '../../shared/session';
 
-const SHARE_CODE_PATTERN = /^[A-Z0-9-]{4,32}$/;
-
-export const normalizeShareCode = (shareCode: string) =>
-  shareCode.trim().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
-
-export const isValidShareCode = (shareCode: string) => SHARE_CODE_PATTERN.test(normalizeShareCode(shareCode));
+export { isValidShareCode, normalizeShareCode };
 
 const createRandomShareCode = () => {
   const value = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(36);
   return normalizeShareCode(value).padEnd(6, 'A');
 };
 
-export const createGameSession = (shareCode = createRandomShareCode()): GameSession => {
+export const createGameSession = (shareCode = createRandomShareCode(), mode: GameMode = 'tail'): GameSession => {
   const normalizedShareCode = normalizeShareCode(shareCode);
 
   return {
     id: `session-${normalizedShareCode}`,
     shareCode: normalizedShareCode,
     seed: normalizedShareCode,
-    mode: 'tail',
+    mode,
     roundCount: 5,
     questionIds: [],
     createdAt: new Date().toISOString(),
@@ -43,11 +39,23 @@ export const readShareCodeFromUrl = () => {
   }
 
   const normalizedShareCode = normalizeShareCode(shareCode);
-  return SHARE_CODE_PATTERN.test(normalizedShareCode) ? normalizedShareCode : null;
+  return isValidShareCode(normalizedShareCode) ? normalizedShareCode : null;
 };
 
-export const buildShareUrl = (shareCode: string) => {
+export const readModeFromUrl = (): GameMode => {
+  const mode = new URLSearchParams(window.location.search).get('mode');
+  return mode === 'type' ? 'type' : 'tail';
+};
+
+export const buildShareUrl = (shareCode: string, mode: GameMode = 'tail') => {
   const url = new URL(window.location.href);
   url.searchParams.set('challenge', normalizeShareCode(shareCode));
+
+  if (mode === 'type') {
+    url.searchParams.set('mode', 'type');
+  } else {
+    url.searchParams.delete('mode');
+  }
+
   return url.toString();
 };

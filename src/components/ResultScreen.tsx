@@ -1,11 +1,18 @@
 import { BASE_CORRECT_POINTS, MAX_TIME_BONUS } from '../game/scoring';
-import type { PlayerResult } from '../types';
+import type { GameMode, PlayerResult } from '../types';
 
 type ResultScreenProps = {
   result: PlayerResult;
+  mode: GameMode;
   bestScore: number;
   shareUrl: string;
   challengeCodeInput: string;
+  playerName: string;
+  submitStatus: 'idle' | 'submitting' | 'success' | 'error';
+  submitMessage: string;
+  submittedRank: number | null;
+  onPlayerNameChange: (value: string) => void;
+  onSubmitScore: () => void;
   onCopyChallenge: () => void;
   onChallengeCodeChange: (value: string) => void;
   onJoinChallenge: () => void;
@@ -35,11 +42,20 @@ const getStarRating = (score: number) => {
   return 1;
 };
 
+const modeLabel = (mode: GameMode) => (mode === 'type' ? 'Name It' : 'Multiple Choice');
+
 export const ResultScreen = ({
   result,
+  mode,
   bestScore,
   shareUrl,
   challengeCodeInput,
+  playerName,
+  submitStatus,
+  submitMessage,
+  submittedRank,
+  onPlayerNameChange,
+  onSubmitScore,
   onCopyChallenge,
   onChallengeCodeChange,
   onJoinChallenge,
@@ -104,6 +120,41 @@ export const ResultScreen = ({
           <span>Avg answer</span>
         </div>
       </div>
+
+      <form
+        className="leaderboard-submit"
+        onSubmit={(event) => {
+          event.preventDefault();
+          onSubmitScore();
+        }}
+      >
+        <label>
+          Post to leaderboard
+          <input
+            autoComplete="nickname"
+            maxLength={24}
+            onChange={(event) => onPlayerNameChange(event.target.value)}
+            placeholder="Display name"
+            value={playerName}
+          />
+        </label>
+        <button disabled={submitStatus === 'submitting' || submitStatus === 'success'} type="submit">
+          {submitStatus === 'submitting'
+            ? 'Submitting...'
+            : submitStatus === 'success'
+              ? 'Score posted'
+              : 'Submit score'}
+        </button>
+      </form>
+
+      {submitStatus === 'success' && submittedRank ? (
+        <p className="notice success">
+          You ranked #{submittedRank} for {modeLabel(mode)}.
+        </p>
+      ) : null}
+      {submitMessage ? (
+        <p className={`notice ${submitStatus === 'error' ? 'error' : ''}`}>{submitMessage}</p>
+      ) : null}
 
       <label className="share-field">
         Challenge link

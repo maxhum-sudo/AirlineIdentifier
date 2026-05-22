@@ -186,6 +186,97 @@ a {
   text-shadow: 0 12px 52px rgba(0, 0, 0, 0.8);
 }
 
+.intro-subtitle {
+  margin: 0;
+  max-width: 28rem;
+  color: #c5d4ea;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.mode-selector {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: min(100%, 520px);
+}
+
+.mode-option {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 88px;
+  align-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 0.9rem 1rem;
+  color: #eaf4ff;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  text-align: left;
+}
+
+.mode-option strong {
+  font-size: 1rem;
+}
+
+.mode-option span {
+  color: #a8bad5;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.mode-option.selected {
+  color: #06101f;
+  background: linear-gradient(135deg, #8ee6ff, #f7d072);
+  border-color: transparent;
+}
+
+.mode-option.selected span {
+  color: rgba(6, 16, 31, 0.72);
+}
+
+.type-answer-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.type-answer-label {
+  display: grid;
+  gap: 0.5rem;
+  color: #a8bad5;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.type-answer-form input {
+  width: 100%;
+  min-height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  padding: 0 1rem;
+  color: #eef4ff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.type-answer-form input:focus {
+  outline: 2px solid rgba(142, 230, 255, 0.45);
+  outline-offset: 2px;
+}
+
+.type-answer-form input.answer-correct {
+  color: #072016;
+  background: #72f1a6;
+  border-color: transparent;
+}
+
+.type-answer-form input.answer-wrong {
+  color: #2c0710;
+  background: #ff8fa3;
+  border-color: transparent;
+}
+
 .start-button {
   min-width: min(78vw, 360px);
   min-height: 76px;
@@ -667,6 +758,128 @@ a {
   font: 0.85rem ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
+.leaderboard-panel {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 1rem;
+  background: rgba(7, 17, 31, 0.78);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(18px);
+}
+
+.leaderboard-panel.compact {
+  margin-top: 0.75rem;
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.leaderboard-header h2 {
+  margin: 0.15rem 0 0;
+  font-size: 1.15rem;
+}
+
+.leaderboard-tabs {
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.leaderboard-tabs button {
+  min-height: 36px;
+  padding: 0 0.85rem;
+  border-radius: 999px;
+  color: #d7e4fb;
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.85rem;
+}
+
+.leaderboard-tabs button.selected {
+  color: #06101f;
+  background: #8ee6ff;
+}
+
+.leaderboard-message {
+  margin: 0;
+  color: #96a8c5;
+  font-size: 0.92rem;
+}
+
+.leaderboard-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leaderboard-list li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  border-radius: 18px;
+  padding: 0.75rem 0.9rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.leaderboard-rank {
+  min-width: 2.5rem;
+  color: #f7d072;
+  font-weight: 800;
+}
+
+.leaderboard-player {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.leaderboard-player strong {
+  font-size: 0.98rem;
+}
+
+.leaderboard-player span {
+  color: #96a8c5;
+  font-size: 0.78rem;
+}
+
+.leaderboard-score {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.leaderboard-submit {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.leaderboard-submit label {
+  display: grid;
+  gap: 0.35rem;
+  color: #96a8c5;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.notice.success {
+  color: #8ee6ff;
+}
+
+.notice.error {
+  color: #ff9d9d;
+}
+
 @media (min-width: 680px) {
   .app-shell {
     padding-inline: 1.5rem;
@@ -707,6 +920,11 @@ a {
   }
 
   .challenge-form {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-selector,
+  .type-answer-form {
     grid-template-columns: 1fr;
   }
 }

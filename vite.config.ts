@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { localApiPlugin } from './server/localApiPlugin';
 
 type CuratedTailImageRequest = {
   airline: {
@@ -131,5 +132,5 @@ const curatedTailImagePlugin = () => ({
 
 export default defineConfig({
   base: process.env.GITHUB_PAGES === 'true' ? '/AirlineIdentifier/' : '/',
-  plugins: [react(), curatedTailImagePlugin()],
+  plugins: [react(), curatedTailImagePlugin(), localApiPlugin()],
 });

@@ -24,7 +24,7 @@ export type Airline = {
   images: AirlineProductImage[];
 };
 
-export type GameMode = 'tail';
+export type GameMode = 'tail' | 'type';
 
 export type GameSession = {
   id: string;
@@ -46,6 +46,7 @@ export type Question = {
 export type PlayerAnswer = {
   questionId: string;
   selectedAirlineId: string | null;
+  typedAnswer?: string;
   correctAirlineId: string;
   isCorrect: boolean;
   elapsedMs: number;
@@ -58,6 +59,15 @@ export type PlayerResult = {
   answers: PlayerAnswer[];
   totalScore: number;
   completedAt: string;
+};
+
+export type LeaderboardEntry = {
+  rank: number;
+  playerName: string;
+  totalScore: number;
+  mode: GameMode;
+  shareCode: string;
+  createdAt: string;
 };
 
 export type WikimediaImage = {
