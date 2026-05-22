@@ -3,11 +3,18 @@ import { sanitizePlayerName } from '../shared/session';
 import type { GameMode, ScoreSubmission } from '../shared/types';
 import { validateScoreSubmission } from '../shared/validateScore';
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
 const jsonResponse = (status: number, body: unknown) =>
   new Response(JSON.stringify(body), {
     status,
     headers: {
       'Content-Type': 'application/json',
+      ...corsHeaders,
     },
   });
 
@@ -116,6 +123,13 @@ export const handleGetLeaderboard = async (request: Request) => {
 };
 
 export const handleApiRequest = async (request: Request) => {
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 204,
+      headers: corsHeaders,
+    });
+  }
+
   const { pathname } = new URL(request.url);
 
   if (pathname === '/api/scores') {

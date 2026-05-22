@@ -23,7 +23,17 @@ export type LeaderboardResponse = {
   error?: string;
 };
 
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
+
+const apiUrl = (path: string) => `${API_BASE}${path}`;
+
 const parseJson = async <T>(response: Response) => {
+  const contentType = response.headers.get('content-type') || '';
+
+  if (!contentType.includes('application/json')) {
+    return null;
+  }
+
   try {
     return (await response.json()) as T;
   } catch {
@@ -31,8 +41,11 @@ const parseJson = async <T>(response: Response) => {
   }
 };
 
+const unavailableMessage =
+  'Leaderboard API is unavailable. Deploy the app to Vercel with DATABASE_URL configured, or set VITE_API_BASE_URL for static hosting.';
+
 export const submitScore = async (input: SubmitScoreInput) => {
-  const response = await fetch('/api/scores', {
+  const response = await fetch(apiUrl('/api/scores'), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -43,7 +56,7 @@ export const submitScore = async (input: SubmitScoreInput) => {
   const payload = await parseJson<SubmitScoreResponse & { error?: string }>(response);
 
   if (!response.ok || !payload) {
-    throw new Error(payload?.error || 'Unable to submit score.');
+    throw new Error(payload?.error || unavailableMessage);
   }
 
   if ('error' in payload && payload.error) {
@@ -73,11 +86,11 @@ export const fetchLeaderboard = async (input?: {
   }
 
   const query = params.toString();
-  const response = await fetch(`/api/leaderboard${query ? `?${query}` : ''}`);
+  const response = await fetch(apiUrl(`/api/leaderboard${query ? `?${query}` : ''}`));
   const payload = await parseJson<LeaderboardResponse>(response);
 
   if (!payload) {
-    throw new Error('Unable to load leaderboard.');
+    throw new Error(unavailableMessage);
   }
 
   return payload;

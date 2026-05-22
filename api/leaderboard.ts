@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { handleGetLeaderboard } from '../server/apiHandlers';
+import { handleGetLeaderboard } from '../server/apiHandlers.ts';
 
 const toWebRequest = (request: VercelRequest) => {
   const protocol = request.headers['x-forwarded-proto'] || 'https';
@@ -13,6 +13,14 @@ const toWebRequest = (request: VercelRequest) => {
 };
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
+  if (request.method === 'OPTIONS') {
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    response.status(204).end();
+    return;
+  }
+
   const webResponse = await handleGetLeaderboard(toWebRequest(request));
   response.status(webResponse.status);
   webResponse.headers.forEach((value, key) => {
