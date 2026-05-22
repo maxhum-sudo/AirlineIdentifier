@@ -8,9 +8,9 @@ await build({
   bundle: true,
   platform: 'node',
   format: 'esm',
-  outfile: 'api/index.js',
+  outfile: 'api/index.bundle.js',
   external: ['@vercel/node'],
   logLevel: 'info',
 });
 
-console.log('Bundled Vercel API handler to api/index.js');
+console.log('Bundled Vercel API handler to api/index.bundle.js');

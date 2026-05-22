@@ -10,4 +10,3 @@ shared/**/*.js
 shared/**/*.d.ts
 lib/**/*.js
 lib/**/*.d.ts
-api/index.js

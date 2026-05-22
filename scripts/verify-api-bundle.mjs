@@ -1,4 +1,4 @@
-import handler from '../api/index.js';
+import handler from '../api/index.bundle.js';
 
 if (typeof handler !== 'function') {
   throw new Error('Bundled API handler must export a default function.');
