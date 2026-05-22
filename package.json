@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json && node scripts/build-api.mjs && vite build",
     "test": "vitest run",
+    "test:all": "npm run build && node scripts/verify-api-bundle.mjs && vitest run",
     "test:watch": "vitest",
     "preview": "vite preview",
     "generate:tailpins": "node scripts/generate-tailpins.mjs",
