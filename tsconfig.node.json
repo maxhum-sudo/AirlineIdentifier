@@ -7,5 +7,5 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["vite.config.ts", "server", "shared", "api", "tests"]
+  "include": ["vite.config.ts", "server", "shared", "api", "lib", "tests"]
 }

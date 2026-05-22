@@ -8,3 +8,5 @@ server/**/*.js
 server/**/*.d.ts
 shared/**/*.js
 shared/**/*.d.ts
+lib/**/*.js
+lib/**/*.d.ts

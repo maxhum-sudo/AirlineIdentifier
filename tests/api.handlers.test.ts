@@ -3,7 +3,7 @@ import {
   handleApiRequest,
   handleGetLeaderboard,
   handlePostScores,
-} from '../api/_lib/handlers';
+} from '../lib/api/handlers';
 import { validateScoreSubmission } from '../shared/validateScore';
 import { buildValidScoreSubmission } from './helpers/scoreSubmission';
 

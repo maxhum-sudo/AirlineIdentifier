@@ -2,11 +2,19 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "functions": {
-    "api/**/*.ts": {
-      "includeFiles": "shared/**"
+    "api/index.ts": {
+      "includeFiles": "lib/**,shared/**"
     }
   },
   "rewrites": [
+    {
+      "source": "/api/leaderboard",
+      "destination": "/api"
+    },
+    {
+      "source": "/api/scores",
+      "destination": "/api"
+    },
     {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
