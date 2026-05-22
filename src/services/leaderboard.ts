@@ -42,7 +42,7 @@ const parseJson = async <T>(response: Response) => {
 };
 
 const unavailableMessage =
-  'Leaderboard API is unavailable. Deploy the app to Vercel with DATABASE_URL configured, or set VITE_API_BASE_URL for static hosting.';
+  'Leaderboard is unavailable right now. If this persists, confirm the Vercel API is deployed and DATABASE_URL is configured.';
 
 export const submitScore = async (input: SubmitScoreInput) => {
   const response = await fetch(apiUrl('/api/scores'), {

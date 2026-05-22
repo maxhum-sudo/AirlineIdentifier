@@ -1,5 +1,5 @@
 import type { ViteDevServer } from 'vite';
-import { handleApiRequest } from './apiHandlers';
+import { handleApiRequest } from '../api/_lib/handlers';
 
 export const localApiPlugin = () => ({
   name: 'local-api',

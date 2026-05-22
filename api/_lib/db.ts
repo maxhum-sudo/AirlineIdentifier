@@ -1,5 +1,5 @@
 import { neon } from '@neondatabase/serverless';
-import type { GameMode, LeaderboardEntry, PlayerAnswer } from '../shared/types';
+import type { GameMode, LeaderboardEntry, PlayerAnswer } from '../../shared/types';
 
 let schemaReady: Promise<void> | null = null;
 

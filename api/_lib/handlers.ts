@@ -1,7 +1,7 @@
 import { fetchLeaderboard, fetchRankForScore, insertScore } from './db';
-import { sanitizePlayerName } from '../shared/session';
-import type { GameMode, ScoreSubmission } from '../shared/types';
-import { validateScoreSubmission } from '../shared/validateScore';
+import { sanitizePlayerName } from '../../shared/session';
+import type { GameMode, ScoreSubmission } from '../../shared/types';
+import { validateScoreSubmission } from '../../shared/validateScore';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
