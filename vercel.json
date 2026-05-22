@@ -2,8 +2,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "functions": {
-    "api/index.ts": {
-      "includeFiles": "lib/**,shared/**"
+    "api/index.cjs": {
+      "maxDuration": 10
     }
   },
   "rewrites": [

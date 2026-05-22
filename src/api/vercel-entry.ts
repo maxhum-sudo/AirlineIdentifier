@@ -1,12 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { handleApiRequest } from '../lib/api/handlers';
+import { handleApiRequest } from '../../lib/api/handlers';
 import {
   applyCorsPreflightIfNeeded,
   sendWebResponse,
   toWebRequest,
-} from '../lib/api/vercel';
+} from '../../lib/api/vercel';
 
-export default async function handler(request: VercelRequest, response: VercelResponse) {
+async function handler(request: VercelRequest, response: VercelResponse) {
   try {
     if (applyCorsPreflightIfNeeded(request, response)) {
       return;
@@ -28,3 +28,5 @@ export default async function handler(request: VercelRequest, response: VercelRe
     );
   }
 }
+
+export default handler;
